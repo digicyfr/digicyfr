@@ -1,6 +1,0 @@
-# HTTrack Website Copier Cookie File
-# This file format is compatible with Netscape cookies
-digicyfr.odoo.com	TRUE	/	FALSE	1999999999	frontend_lang	en_US
-digicyfr.odoo.com	TRUE	/	FALSE	1999999999	session_id	77571122868c434e49b2b82e727657607b972b0f
-digicyfr.odoo.com	TRUE	/	FALSE	1999999999	SameSite	Lax
-
