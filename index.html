@@ -28,6 +28,15 @@
         .section-title {
             font-size: 2.25rem; /* 36px */
         }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem; /* Reduce heading size on smaller screens */
+            }
+            .section-title {
+                font-size: 1.75rem;
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -35,120 +44,102 @@
     <nav class="bg-white shadow-md">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <a href="index.html" class="flex items-center">
-                <img src="web/image/digicyfrlogo.png" alt="Digicyfr Logo" class="h-20 w-auto">
+                <img src="web/image/digicyfrlogo.png" alt="Digicyfr Logo" class="h-16 w-auto">
             </a>
-            <div class="flex space-x-6">
-                <a href="index.html" class="text-blue-600 font-semibold">Home</a>
-                <a href="our-services.html" class="text-gray-700 hover:text-blue-600">Services</a>
-                <a href="about-us.html" class="text-gray-700 hover:text-blue-600">About Us</a>
-                <a href="contactus.html" class="text-gray-700 hover:text-blue-600">Contact</a>
-            </div>
-            <div>
-                <a href="web/login.html" class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition">Sign In</a>
+            <button id="menu-button" class="text-gray-700 md:hidden focus:outline-none">
+                <!-- Menu icon for mobile -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            <div id="menu" class="w-full md:flex md:space-x-6 hidden">
+                <a href="index.html" class="text-blue-600 font-semibold block mt-2 md:mt-0">Home</a>
+                <a href="our-services.html" class="text-gray-700 hover:text-blue-600 block mt-2 md:mt-0">Services</a>
+                <a href="about-us.html" class="text-gray-700 hover:text-blue-600 block mt-2 md:mt-0">About Us</a>
+                <a href="contactus.html" class="text-gray-700 hover:text-blue-600 block mt-2 md:mt-0">Contact</a>
+                <a href="web/login.html" class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition block mt-2 md:mt-0">Sign In</a>
             </div>
         </div>
     </nav>
-        </header>
 
-        <!-- Hero Section -->
-        <section class="hero min-h-screen flex items-center pt-32 bg-gray-100">
-            <div class="container mx-auto px-4 text-center">
-                <h1 class="text-6xl font-bold mb-6 gradient-text fade-in">Welcome to Digicyfr</h1>
-                <p class="text-xl mb-8 fade-in">Empowering Your Business with Innovative ERP Solutions</p>
-                <a href="our-services.html" class="btn-primary bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full text-lg inline-block fade-in">
-                    Explore Our Services
-                </a>
+    <!-- Hero Section -->
+    <section class="hero min-h-screen flex items-center pt-20 bg-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 gradient-text">Welcome to Digicyfr</h1>
+            <p class="text-lg md:text-xl mb-8">Empowering Your Business with Innovative ERP Solutions</p>
+            <a href="our-services.html" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full text-lg inline-block">
+                Explore Our Services
+            </a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="py-20 bg-gray-50">
+        <!-- Value Proposition -->
+        <section class="value-prop mb-20 text-center">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 gradient-text">We Digitalise Your Business Processes in Odoo</h2>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto">Whether you need a quick solution or have specific processes that need to be optimised, we are your partner to implement Odoo solutions.</p>
             </div>
         </section>
 
-        <!-- Main Content -->
-        <main class="py-20 bg-gray-50">
-            <!-- Value Proposition -->
-            <section class="value-prop mb-20">
-                <div class="container mx-auto px-4 text-center">
-                    <h2 class="text-4xl font-bold mb-6 gradient-text fade-in">We Digitalise Your Business Processes in Odoo</h2>
-                    <p class="text-xl max-w-3xl mx-auto fade-in">Whether you need a quick solution or have specific processes that need to be optimised, we are your partner to implement Odoo solutions.</p>
+        <!-- Modules Section -->
+        <section class="modules mb-20">
+            <div class="container mx-auto px-4">
+                <h3 class="text-2xl md:text-3xl font-bold mb-10 text-center gradient-text">Modules</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="service-card p-6 text-center">Sales</div>
+                    <div class="service-card p-6 text-center">Finance</div>
+                    <div class="service-card p-6 text-center">CRM</div>
+                    <div class="service-card p-6 text-center">Stock & ERP</div>
+                    <div class="service-card p-6 text-center">Services</div>
+                    <div class="service-card p-6 text-center">Projects</div>
+                    <div class="service-card p-6 text-center">Website</div>
+                    <div class="service-card p-6 text-center">E-commerce</div>
+                    <div class="service-card p-6 text-center">Marketing</div>
                 </div>
-            </section>
-
-            <!-- Modules Section -->
-            <section class="modules mb-20">
-                <div class="container mx-auto px-4">
-                    <h3 class="text-3xl font-bold mb-10 text-center gradient-text fade-in">Modules</h3>
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                        <div class="service-card p-6 text-center fade-in">Sales</div>
-                        <div class="service-card p-6 text-center fade-in">Finance</div>
-                        <div class="service-card p-6 text-center fade-in">CRM</div>
-                        <div class="service-card p-6 text-center fade-in">Stock & ERP</div>
-                        <div class="service-card p-6 text-center fade-in">Services</div>
-                        <div class="service-card p-6 text-center fade-in">Projects</div>
-                        <div class="service-card p-6 text-center fade-in">Website</div>
-                        <div class="service-card p-6 text-center fade-in">E-commerce</div>
-                        <div class="service-card p-6 text-center fade-in">Marketing</div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Industries Section -->
-            <section class="industries mb-20">
-                <div class="container mx-auto px-4">
-                    <h3 class="text-3xl font-bold mb-10 text-center gradient-text fade-in">Industries</h3>
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                        <div class="service-card p-6 text-center fade-in">Retail</div>
-                        <div class="service-card p-6 text-center fade-in">Construction</div>
-                        <div class="service-card p-6 text-center fade-in">Green Energy</div>
-                        <div class="service-card p-6 text-center fade-in">Health & Pharma</div>
-                        <div class="service-card p-6 text-center fade-in">Automotive</div>
-                        <div class="service-card p-6 text-center fade-in">Manufacturing</div>
-                        <div class="service-card p-6 text-center fade-in">Logistics</div>
-                        <div class="service-card p-6 text-center fade-in">Laboratoria</div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Solution Section -->
-            <section class="solutions">
-                <div class="container mx-auto px-4 max-w-4xl text-center">
-                    <h3 class="text-3xl font-bold mb-6 gradient-text fade-in">Quick Start or Tailored Solution?</h3>
-                    <p class="text-lg leading-relaxed fade-in">
-                        With Odoo, you can consolidate all your business processes into one software package. 
-                        Do you want to quickly get started with a ready-made solution for your industry? 
-                        Or would you prefer a customised package tailored to your company's needs? 
-                        Together, we analyse your business management and determine the most effective way 
-                        to optimise your processes within your organisation.
-                    </p>
-                </div>
-            </section>
-        </main>
-
-        <!-- Footer -->
-        <footer class="py-8 border-t border-gray-800">
-            <div class="container mx-auto px-4 text-center text-gray-400">
-                <p>&copy; 2024 Digicyfr. All rights reserved.</p>
             </div>
-        </footer>
-    </div>
+        </section>
+
+        <!-- Industries Section -->
+        <section class="industries mb-20">
+            <div class="container mx-auto px-4">
+                <h3 class="text-2xl md:text-3xl font-bold mb-10 text-center gradient-text">Industries</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="service-card p-6 text-center">Retail</div>
+                    <div class="service-card p-6 text-center">Construction</div>
+                    <div class="service-card p-6 text-center">Green Energy</div>
+                    <div class="service-card p-6 text-center">Health & Pharma</div>
+                    <div class="service-card p-6 text-center">Automotive</div>
+                    <div class="service-card p-6 text-center">Manufacturing</div>
+                    <div class="service-card p-6 text-center">Logistics</div>
+                    <div class="service-card p-6 text-center">Laboratoria</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution Section -->
+        <section class="solutions mb-20">
+            <div class="container mx-auto px-4 max-w-4xl text-center">
+                <h3 class="text-2xl md:text-3xl font-bold mb-6 gradient-text">Quick Start or Tailored Solution?</h3>
+                <p class="text-lg leading-relaxed">With Odoo, you can consolidate all your business processes into one software package. Do you want to quickly get started with a ready-made solution for your industry? Or would you prefer a customised package tailored to your company's needs? Together, we analyse your business management and determine the most effective way to optimise your processes within your organisation.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-gray-800">
+        <div class="container mx-auto px-4 text-center text-gray-400">
+            <p>&copy; 2024 Digicyfr. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script>
-        // Fade-in animation on scroll
-        const fadeElements = document.querySelectorAll('.fade-in');
-        const observerOptions = {
-            root: null,
-            threshold: 0.1
-        };
-
-        const fadeInObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        fadeElements.forEach(element => {
-            fadeInObserver.observe(element);
-        });
+        // Toggle menu on mobile
+        document.getElementById('menu-button').onclick = function() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('hidden');
+        }
     </script>
 </body>
 </html>
