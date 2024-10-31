@@ -4,138 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digicyfr - Business Process Solutions</title>
-    <link href="digicyfr.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #FF3366;
-            --secondary: #FF6B4A;
-            --dark: #0A0B1A;
-        }
-
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--dark);
-            color: white;
         }
-
         .gradient-text {
-            background: linear-gradient(to right, var(--primary), var(--secondary));
+            background: linear-gradient(90deg, #4A90E2, #50C878);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
-        .gradient-bg {
-            background: linear-gradient(to right, var(--primary), var(--secondary));
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: #fff;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-
-        .nav-menu a:hover {
-            color: var(--primary);
-            transition: color 0.3s ease;
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
-
-        .module-grid, .industry-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-        }
-
-        .card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .btn-primary {
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            transition: transform 0.3s ease;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(255, 51, 102, 0.3);
-        }
-
-        /* Animation classes */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .top-bar {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px);
-        }
-
-        .main-nav {
-            background: rgba(10, 11, 26, 0.95);
-            backdrop-filter: blur(10px);
+        .section-title {
+            font-size: 2.25rem; /* 36px */
         }
     </style>
 </head>
-<body>
-    <div id="wrapwrap" class="homepage">
-        <!-- Header -->
-        <header class="main-header fixed w-full z-50">
-            <!-- Top Bar -->
-            <div class="top-bar py-2">
-                <div class="container mx-auto px-4">
-                    <div class="flex justify-between items-center">
-                        <span class="text-sm">Low Price Guarantee</span>
-                        <a href="contactus.html" class="btn-primary px-4 py-2 rounded-full text-sm">Contact Us</a>
-                    </div>
-                </div>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="web/image/digicyfrlogo.png" alt="Digicyfr Logo" class="h-20 w-auto">
+            </a>
+            <div class="flex space-x-6">
+                <a href="index.html" class="text-blue-600 font-semibold">Home</a>
+                <a href="our-services.html" class="text-gray-700 hover:text-blue-600">Services</a>
+                <a href="about-us.html" class="text-gray-700 hover:text-blue-600">About Us</a>
+                <a href="contactus.html" class="text-gray-700 hover:text-blue-600">Contact</a>
             </div>
-
-            <!-- Main Navigation -->
-            <nav class="main-nav py-4">
-                <div class="container mx-auto px-4">
-                    <div class="flex justify-between items-center">
-                        <a href="index.html" class="logo">
-                            <img src="web/image/website/1/My Website5f49.ico" alt="Digicyfr" class="h-10">
-                        </a>
-                        
-                        <div class="nav-right flex items-center space-x-8">
-                            <a href="web/login.html" class="btn-primary px-6 py-2 rounded-full">Sign In</a>
-                            
-                            <ul class="nav-menu hidden md:flex space-x-6">
-                                <li><a href="index.html" class="hover:text-primary">Home</a></li>
-                                <li><a href="our-services.html">Our Services</a></li>
-                                <li><a href="aboutus.html">About Us</a></li>
-                                <li><a href="jobs.html">Jobs</a></li>
-                                <li><a href="events.html">Events</a></li>
-                                <li><a href="news.html">News</a></li>
-                                <li><a href="contactus.html">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </nav>
+            <div>
+                <a href="web/login.html" class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition">Sign In</a>
+            </div>
+        </div>
+    </nav>
         </header>
 
         <!-- Hero Section -->
-        <section class="hero min-h-screen flex items-center pt-32">
+        <section class="hero min-h-screen flex items-center pt-32 bg-gray-100">
             <div class="container mx-auto px-4 text-center">
                 <h1 class="text-6xl font-bold mb-6 gradient-text fade-in">Welcome to Digicyfr</h1>
                 <p class="text-xl mb-8 fade-in">Empowering Your Business with Innovative ERP Solutions</p>
-                <a href="our-services.html" class="btn-primary px-8 py-4 rounded-full text-lg inline-block fade-in">
+                <a href="our-services.html" class="btn-primary bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full text-lg inline-block fade-in">
                     Explore Our Services
                 </a>
             </div>
         </section>
 
         <!-- Main Content -->
-        <main class="py-20">
+        <main class="py-20 bg-gray-50">
             <!-- Value Proposition -->
             <section class="value-prop mb-20">
                 <div class="container mx-auto px-4 text-center">
@@ -148,16 +75,16 @@
             <section class="modules mb-20">
                 <div class="container mx-auto px-4">
                     <h3 class="text-3xl font-bold mb-10 text-center gradient-text fade-in">Modules</h3>
-                    <div class="module-grid">
-                        <div class="card p-6 text-center fade-in">Sales</div>
-                        <div class="card p-6 text-center fade-in">Finance</div>
-                        <div class="card p-6 text-center fade-in">CRM</div>
-                        <div class="card p-6 text-center fade-in">Stock & ERP</div>
-                        <div class="card p-6 text-center fade-in">Services</div>
-                        <div class="card p-6 text-center fade-in">Projects</div>
-                        <div class="card p-6 text-center fade-in">Website</div>
-                        <div class="card p-6 text-center fade-in">E-commerce</div>
-                        <div class="card p-6 text-center fade-in">Marketing</div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                        <div class="service-card p-6 text-center fade-in">Sales</div>
+                        <div class="service-card p-6 text-center fade-in">Finance</div>
+                        <div class="service-card p-6 text-center fade-in">CRM</div>
+                        <div class="service-card p-6 text-center fade-in">Stock & ERP</div>
+                        <div class="service-card p-6 text-center fade-in">Services</div>
+                        <div class="service-card p-6 text-center fade-in">Projects</div>
+                        <div class="service-card p-6 text-center fade-in">Website</div>
+                        <div class="service-card p-6 text-center fade-in">E-commerce</div>
+                        <div class="service-card p-6 text-center fade-in">Marketing</div>
                     </div>
                 </div>
             </section>
@@ -166,15 +93,15 @@
             <section class="industries mb-20">
                 <div class="container mx-auto px-4">
                     <h3 class="text-3xl font-bold mb-10 text-center gradient-text fade-in">Industries</h3>
-                    <div class="industry-grid">
-                        <div class="card p-6 text-center fade-in">Retail</div>
-                        <div class="card p-6 text-center fade-in">Construction</div>
-                        <div class="card p-6 text-center fade-in">Green Energy</div>
-                        <div class="card p-6 text-center fade-in">Health & Pharma</div>
-                        <div class="card p-6 text-center fade-in">Automotive</div>
-                        <div class="card p-6 text-center fade-in">Manufacturing</div>
-                        <div class="card p-6 text-center fade-in">Logistics</div>
-                        <div class="card p-6 text-center fade-in">Laboratoria</div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                        <div class="service-card p-6 text-center fade-in">Retail</div>
+                        <div class="service-card p-6 text-center fade-in">Construction</div>
+                        <div class="service-card p-6 text-center fade-in">Green Energy</div>
+                        <div class="service-card p-6 text-center fade-in">Health & Pharma</div>
+                        <div class="service-card p-6 text-center fade-in">Automotive</div>
+                        <div class="service-card p-6 text-center fade-in">Manufacturing</div>
+                        <div class="service-card p-6 text-center fade-in">Logistics</div>
+                        <div class="service-card p-6 text-center fade-in">Laboratoria</div>
                     </div>
                 </div>
             </section>
@@ -203,79 +130,24 @@
     </div>
 
     <script>
-        // Intersection Observer for fade-in animations
+        // Fade-in animation on scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
         const observerOptions = {
             root: null,
-            rootMargin: '0px',
             threshold: 0.1
         };
 
-        const observer = new IntersectionObserver((entries) => {
+        const fadeInObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
                 }
             });
         }, observerOptions);
 
-        // Observe all fade-in elements
-        document.querySelectorAll('.fade-in').forEach(element => {
-            observer.observe(element);
-        });
-
-        // Mobile menu toggle
-        const mobileMenuBtn = document.createElement('button');
-        mobileMenuBtn.className = 'md:hidden p-2';
-        mobileMenuBtn.innerHTML = `
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-        `;
-
-        // Add mobile menu functionality
-        const navMenu = document.querySelector('.nav-menu');
-        mobileMenuBtn.addEventListener('click', () => {
-            navMenu.classList.toggle('hidden');
-            navMenu.classList.toggle('flex');
-            navMenu.classList.toggle('flex-col');
-            navMenu.classList.toggle('absolute');
-            navMenu.classList.toggle('top-full');
-            navMenu.classList.toggle('left-0');
-            navMenu.classList.toggle('right-0');
-            navMenu.classList.toggle('bg-dark');
-            navMenu.classList.toggle('p-4');
-        });
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Header scroll behavior
-        let lastScroll = 0;
-        const header = document.querySelector('.main-header');
-
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-            
-            if (currentScroll <= 0) {
-                header.classList.remove('scroll-up');
-                return;
-            }
-            
-            if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
-                header.classList.remove('scroll-up');
-                header.classList.add('scroll-down');
-            } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
-                header.classList.remove('scroll-down');
-                header.classList.add('scroll-up');
-            }
-            lastScroll = currentScroll;
+        fadeElements.forEach(element => {
+            fadeInObserver.observe(element);
         });
     </script>
 </body>
