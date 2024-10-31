@@ -20,24 +20,28 @@
     <nav class="bg-white shadow-md">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <a href="our-services.html" class="flex items-center">
-                <img src="web/image/digicyfrlogo.png" alt="Digicyfr Logo" class="h-20 w-auto">
+                <img src="web/image/digicyfrlogo.png" alt="Digicyfr Logo" class="h-16 w-auto">
             </a>
-            <div class="flex space-x-6">
+            <button id="menu-button" class="text-gray-700 md:hidden focus:outline-none">
+                <!-- Mobile menu icon -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            <div id="menu" class="hidden md:flex space-x-6">
                 <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
                 <a href="our-services.html" class="text-blue-600 font-semibold">Services</a>
                 <a href="about-us.html" class="text-gray-700 hover:text-blue-600">About Us</a>
                 <a href="contactus.html" class="text-gray-700 hover:text-blue-600">Contact</a>
-            </div>
-            <div>
                 <a href="web/login.html" class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition">Sign In</a>
             </div>
         </div>
     </nav>
-        </header>   
+
     <!-- Hero Section -->
     <header class="text-white gradient-bg py-20 text-center">
-        <h1 class="text-5xl font-bold">About Digicyfr</h1>
-        <p class="text-lg mt-4">Innovative Solutions for Modern Businesses</p>
+        <h1 class="text-4xl md:text-5xl font-bold">About Digicyfr</h1>
+        <p class="text-lg md:text-xl mt-4">Innovative Solutions for Modern Businesses</p>
     </header>
 
     <!-- Mission Section -->
@@ -55,7 +59,6 @@
                 <p class="text-lg text-gray-600 mb-6">Our ERP software offers customizable solutions to fit your business needs, from accounting and HR to inventory and sales management.</p>
                 <a href="our-services.html" class="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-3 rounded-md transition">Learn More</a>
             </div>
-
         </section>
 
         <!-- Team Section -->
@@ -84,5 +87,13 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Toggle menu for mobile
+        document.getElementById('menu-button').onclick = function() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
 </body>
 </html>
