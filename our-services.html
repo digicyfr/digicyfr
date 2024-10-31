@@ -29,34 +29,38 @@
     <nav class="bg-white shadow-md">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <a href="our-services.html" class="flex items-center">
-                <img src="web/image/digicyfrlogo.png" alt="Digicyfr Logo" class="h-20 w-auto">
+                <img src="web/image/digicyfrlogo.png" alt="Digicyfr Logo" class="h-16 w-auto">
             </a>
-            <div class="flex space-x-6">
-                <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
-                <a href="our-services.html" class="text-blue-600 font-semibold">Services</a>
-                <a href="about-us.html" class="text-gray-700 hover:text-blue-600">About Us</a>
-                <a href="contactus.html" class="text-gray-700 hover:text-blue-600">Contact</a>
-            </div>
-            <div>
-                <a href="web/login.html" class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition">Sign In</a>
+            <button id="menu-button" class="text-gray-700 md:hidden focus:outline-none">
+                <!-- Mobile menu icon -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            <div id="menu" class="w-full md:flex md:space-x-6 hidden">
+                <a href="index.html" class="text-gray-700 hover:text-blue-600 block mt-2 md:mt-0">Home</a>
+                <a href="our-services.html" class="text-blue-600 font-semibold block mt-2 md:mt-0">Services</a>
+                <a href="about-us.html" class="text-gray-700 hover:text-blue-600 block mt-2 md:mt-0">About Us</a>
+                <a href="contactus.html" class="text-gray-700 hover:text-blue-600 block mt-2 md:mt-0">Contact</a>
+                <a href="web/login.html" class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition block mt-2 md:mt-0">Sign In</a>
             </div>
         </div>
     </nav>
-        </header>   
+
     <!-- Hero Section -->
     <header class="bg-gradient-to-r from-blue-500 to-green-400 text-white py-20">
         <div class="container mx-auto text-center">
-            <h1 class="text-5xl font-bold mb-4">Our Services</h1>
-            <p class="text-xl max-w-2xl mx-auto">Discover how Digicyfr can transform your business processes with tailored solutions that drive efficiency and growth.</p>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Our Services</h1>
+            <p class="text-lg md:text-xl max-w-2xl mx-auto">Discover how Digicyfr can transform your business processes with tailored solutions that drive efficiency and growth.</p>
         </div>
-
+    </header>
 
     <!-- Services Section -->
     <section class="container mx-auto px-4 py-16">
-        <div class="grid md:grid-cols-3 gap-8">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- ERP for Rental Firms -->
             <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="web/image/1051-0f189f4d/DALL%c2%b7E%202024-06-19%2020.35.37%20-%20An%20image%20showcasing%20an%20ERP%20solution%20for%20rental%20services.%20The%20image%20includes%20a%20modern%20office%20setting%20with%20a%20computer%20screen%20displ" alt="ERP for Rental Firms" class="w-full h-64 object-cover">
+                <img src="web/image/erp_rental.jpg" alt="ERP for Rental Firms" class="w-full h-64 object-cover">
                 <div class="p-6">
                     <h3 class="text-2xl font-bold mb-4 gradient-text">ERP for Rental Firms</h3>
                     <hr class="border-t-2 border-blue-200 mb-4">
@@ -66,7 +70,7 @@
 
             <!-- ERP for Mechanical Engineering Workshops -->
             <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="web/image/1052-d8f62621/DALL%c2%b7E%202024-06-19%2020.37.32%20-%20A%20simplified%20and%20creative%20image%20showcasing%20an%20ERP%20solution%20for%20a%20mechanical%20engineering%20workshop.%20The%20image%20features%20a%20sleek%2c%20mo" alt="ERP for Mechanical Engineering" class="w-full h-64 object-cover">
+                <img src="web/image/erp_mechanical.jpg" alt="ERP for Mechanical Engineering" class="w-full h-64 object-cover">
                 <div class="p-6">
                     <h3 class="text-2xl font-bold mb-4 gradient-text">ERP for Mechanical Engineering</h3>
                     <hr class="border-t-2 border-blue-200 mb-4">
@@ -76,7 +80,7 @@
 
             <!-- ERP for Restaurants -->
             <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="web/image/1053-38a09634/DALL%c2%b7E%202024-06-19%2020.38.16%20-%20An%20image%20showcasing%20an%20ERP%20solution%20for%20restaurants.%20The%20image%20features%20a%20sleek%2c%20modern%20computer%20screen%20displaying%20a%20user-friend" alt="ERP for Restaurants" class="w-full h-64 object-cover">
+                <img src="web/image/erp_restaurant.jpg" alt="ERP for Restaurants" class="w-full h-64 object-cover">
                 <div class="p-6">
                     <h3 class="text-2xl font-bold mb-4 gradient-text">ERP for Restaurants</h3>
                     <hr class="border-t-2 border-blue-200 mb-4">
@@ -89,8 +93,8 @@
     <!-- Additional Services Section -->
     <section class="bg-gray-100 py-16">
         <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-8 gradient-text">Additional Services We Offer</h2>
-            <div class="grid md:grid-cols-4 gap-6 px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 gradient-text">Additional Services We Offer</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <h4 class="text-xl font-semibold mb-3">Custom ERP Solutions</h4>
                     <p class="text-gray-600">Tailored solutions that fit your unique business needs.</p>
@@ -114,8 +118,8 @@
     <!-- Call to Action -->
     <section class="bg-gradient-to-r from-blue-600 to-green-500 text-white py-16">
         <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-4">Ready to Transform Your Business?</h2>
-            <p class="text-xl mb-8">Let's discuss how Digicyfr can help you achieve your business goals.</p>
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Your Business?</h2>
+            <p class="text-lg md:text-xl mb-8">Let's discuss how Digicyfr can help you achieve your business goals.</p>
             <a href="contactus.html" class="bg-white text-blue-600 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition">Contact Us</a>
         </div>
     </section>
@@ -126,5 +130,13 @@
             <p>&copy; 2024 Digicyfr. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Toggle menu on mobile
+        document.getElementById('menu-button').onclick = function() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
 </body>
 </html>
